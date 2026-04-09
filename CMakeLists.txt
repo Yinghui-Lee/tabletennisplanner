@@ -92,6 +92,9 @@ ament_target_dependencies(table_tennis_node
     std_msgs
 )
 
+add_executable(test_zed_udp tools/test_zed_udp.cpp)
+target_link_libraries(test_zed_udp PRIVATE nlohmann_json::nlohmann_json)
+
 # ============================================================
 # Install targets
 # Static libraries: install to lib/ for potential downstream reuse
@@ -101,7 +104,7 @@ install(TARGETS tt_core tt_zed_receiver
     ARCHIVE DESTINATION lib
 )
 
-install(TARGETS table_tennis_node
+install(TARGETS table_tennis_node test_zed_udp
     DESTINATION lib/${PROJECT_NAME}
 )
 

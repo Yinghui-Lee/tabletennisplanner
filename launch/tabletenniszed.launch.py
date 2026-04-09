@@ -34,8 +34,8 @@ def generate_launch_description():
 
     udp_host_arg = DeclareLaunchArgument(
         "udp_host",
-        default_value="172.16.2.101",
-        description="UDP host address (overrides value in params_file)",
+        default_value="0.0.0.0",
+        description="Local UDP bind address (overrides value in params_file)",
     )
 
     udp_port_arg = DeclareLaunchArgument(

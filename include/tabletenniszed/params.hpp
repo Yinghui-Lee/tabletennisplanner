@@ -16,7 +16,7 @@ struct Params {
     // ============================================================
     // Communication
     // ============================================================
-    std::string zed_udp_host        = "172.16.2.101";
+    std::string zed_udp_host        = "0.0.0.0";
     int         zed_udp_port        = 8888;
     int         planning_update_rate = 100;
 
